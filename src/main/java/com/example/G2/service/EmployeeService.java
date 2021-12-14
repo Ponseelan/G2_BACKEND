@@ -27,7 +27,7 @@ public class EmployeeService {
             var employees = Arrays.asList(restTemplate.getForObject(g2CrowdURL, Employee[].class));
             return employees;
         } catch (RuntimeException ex) {
-            var error = Error.createError("Error on invoking URL: " + g2CrowdURL, "Get Employees");
+            var error = Error.create("Error on invoking URL: " + g2CrowdURL, "Get Employees");
             throw new APIIntegrationException(error);
         }
 

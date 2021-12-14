@@ -10,15 +10,15 @@ public class ActionResult {
     Object Value;
     ActionResultStatus status;
 
-    public ActionResult(String action, String entity, String entityUniqueId, Object value,ActionResultStatus status) {
+    private ActionResult(String action, String entity, String entityUniqueId, Object value, ActionResultStatus status) {
         this.action = action;
         this.entity = entity;
         this.entityUniqueId = entityUniqueId;
         Value = value;
-        this.status=status;
+        this.status = status;
     }
 
-    public static ActionResult create(String action, String entity, String entityUniqueId, Object value,ActionResultStatus status) {
-       return new ActionResult(action,entity,entityUniqueId,value,status);
+    public static ActionResult create(String action, String entity, String entityUniqueId, Object value, ActionResultStatus status) {
+        return new ActionResult(action, entity, entityUniqueId, value, status);
     }
 }

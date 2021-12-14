@@ -17,9 +17,9 @@ public class EmployeeVoteService {
     public ActionResult addVote(String employeeName) {
         Integer result = 1;
         if (isEmployeeExists(employeeName))
-            result= employeeVoteRepository.updateVote(employeeName);
+            result = employeeVoteRepository.updateVote(employeeName);
         else {
-            var employeeVote =  EmployeeVote.create(employeeName);
+            var employeeVote = EmployeeVote.create(employeeName);
             employeeVoteRepository.save(employeeVote);
         }
         var actionResult = ActionResult.create("Vote", "EmployeeVote", employeeName, result, ActionResultStatus.SUCCESS);

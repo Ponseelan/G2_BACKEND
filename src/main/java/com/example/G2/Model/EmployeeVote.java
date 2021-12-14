@@ -18,10 +18,10 @@ public class EmployeeVote {
     private Long Id;
     private int numberOfVotes;
 
-    public EmployeeVote() {
+    private EmployeeVote() {
     }
 
-    public EmployeeVote(String employeeName, int numberOfVotes) {
+    private EmployeeVote(String employeeName, int numberOfVotes) {
         this.employeeName = employeeName;
         this.numberOfVotes = numberOfVotes;
     }

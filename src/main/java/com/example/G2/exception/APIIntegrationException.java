@@ -4,9 +4,10 @@ import com.example.G2.Model.Error;
 
 
 public class APIIntegrationException extends RuntimeException {
-    private Error error;
+    private final Error error;
+
     public APIIntegrationException(Error error) {
-this.error=error;
+        this.error = error;
     }
 
     public Error getError() {
